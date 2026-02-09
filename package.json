@@ -1,0 +1,27 @@
+{
+  "name": "jan25-t2w04-mongoose-intro",
+  "version": "1.0.0",
+  "description": "ExpressJS with MongooseJS to use MongoDB data!",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node src/index.js",
+    "dev":"node --watch src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexStormwood/jan25-t2w04-mongoose-intro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AlexStormwood/jan25-t2w04-mongoose-intro/issues"
+  },
+  "homepage": "https://github.com/AlexStormwood/jan25-t2w04-mongoose-intro#readme"
+}
