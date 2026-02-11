@@ -59,9 +59,43 @@ router.get("/username/:username", async (request, response) => {
 });
 
 // Update route
+router.patch("/id/:userId", async (request, response) => {
+	// 1. find the target user 
+	let targetUser = await UserModel.findById(request.params.userId);
+	console.log(targetUser);
+	// 2. update the target user 
+	// One property at a time to give room for validation, e.g.
+	// if (request.body.username == some profanity){cancel the update}
+	targetUser.username = request.body.username;
+
+	// Update all properties based on data provided from the request
+	// in bulk, no validation, just go for it
+	// targetUser = {...targetUser, ...request.body};
+	// console.log("-----");
+	console.log(targetUser);
+	await targetUser.save();
+
+	// 3. return the updated user data 
+	response.json({
+		message:"User update operation completed!",
+		data: targetUser
+	});
+
+});
 
 
 // Delete route 
+router.delete("/id/:userId", async (request, response) => {
+	// Search for user by ID and delete them in one fell swoop!
+	await UserModel.deleteOne({id: request.params.userId});
+
+	// let resultAlternateWay = await UserModel.findByIdAndDelete(request.params.userId);
+
+	response.json({
+		message: "User delete operation completed.",
+		data: request.params.userId
+	});
+});
 
 
 // Named exports within an object
