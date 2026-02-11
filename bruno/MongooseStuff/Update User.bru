@@ -4,15 +4,15 @@ meta {
   seq: 5
 }
 
-post {
-  url: http://localhost:3000/users
+patch {
+  url: http://localhost:3000/users/id/698c416e2dacad548b91983f
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "username":"alex"
+    "username":"update-success"
   }
 }
 
