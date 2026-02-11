@@ -4,6 +4,11 @@
 const express = require("express");
 const app = express();
 
+// middleware!
+// this allows JSON data to come in on ANY request
+// so we can receive JSON body data in our POST/etc routes!
+app.use(express.json());
+
 app.get("/", (request, response) => {
 	response.json({
 		message:"Hello, world!"
