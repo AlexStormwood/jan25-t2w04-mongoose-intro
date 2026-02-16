@@ -1,0 +1,22 @@
+meta {
+  name: Find All Articles Written By Specific User
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:3000/articles/author/update-success
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "username":"alex"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -22,8 +22,26 @@ async function seed(){
 	// seeded articles all belong to user with ID of 698c416e2dacad548b91983f
 	let articlesToSeed = [
 		{
-			title: "Seed Article 01",
-			body: "Sample data blah blah blah blah article 1 yay!",
+			title: [
+				{
+					language: "en",
+					content: "Sample Article 01"
+				},
+				{
+					language: "jp",
+					content: "サンプル記事01"
+				},
+				{
+					language: "pt-br",
+					content: "Exemplo de Artigo 1"
+				}
+			],
+			body: [
+				{
+					language: "en",
+					content: "Example article 01 body content!"
+				}
+			],
 			author: "698c416e2dacad548b91983f"
 			// author: seedUser.id
 			// author: seedUser._id

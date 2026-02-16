@@ -1,15 +1,16 @@
 const mongoose = require("mongoose");
+const { LocalisedContentSchema } = require("./LocalisedContentSchema");
 
 // schemaVariable = new mongoose.Schema(fields, options)
 const ArticleSchema = new mongoose.Schema(
 	// fields
 	{
 		title: {
-			type: String,
+			type: [LocalisedContentSchema],
 			required: true
 		},
 		body: {
-			type: String,
+			type: [LocalisedContentSchema],
 			require: true
 		},
 		// someUser.id - string version 
